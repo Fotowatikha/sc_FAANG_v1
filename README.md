@@ -5,7 +5,7 @@ Welcome to the Single-Cell RNA Sequencing (scRNA-seq) Workshop repository. This 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Workshop Objectives](#workshop-objectives)
-- [Requirements and Installation](#Requirements and Installation)
+- [Requirements and Installation](#Requirements-and-Installation)
 - [Folder Structure and Files](#folder-structure-and-files)
 - [Setting Up the Conda Environment](#setting-up-the-conda-environment)
 - [Setting Up the R Kernel](#setting-up-the-r-kernel)
