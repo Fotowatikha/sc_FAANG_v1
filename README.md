@@ -17,6 +17,33 @@ To begin, clone this repository by running the following commands:
 ```sh
 git clone 
 ```
+Or copy the **for_Ole** folder from `/lustre/shared/for_Ole`, which contains all the files that you need. All relevant workshop files are located in the following directory on the cluster as follows:
+```text
+/lustre/shared/for_Ole
+├── rscript
+│   ├── data_workshop
+│   │   ├── ileum_tissue
+│   │   ├── organoid.seurat
+│   │   ├── organoid.cds
+│   │   └── (additional data files)
+│   ├── FAANG_RMD.Rmd
+│   ├── FAANG.ipynb
+│   ├── Figures
+│   │   └── (markdown figures for notebook explanations)
+│   ├── generated_Figures
+│   │   └── (temporary folder to render figures)
+│   └── R_session
+│       └── (backup R session files)
+├── workshop_requirements.txt
+```
+	
+	•	rscript/data_workshop: Contains raw data files, including ileum_tissue, organoid.seurat, and organoid.cds objects for analysis.
+	•	FAANG_RMD.Rmd: Backup R Notebook for local use.
+	•	FAANG.ipynb: The main Jupyter Notebook for the workshop.
+	•	Figures: Contains markdown figures used in notebook explanations.
+	•	generated_Figures: A temporary folder for rendering figures during the workshop.
+	•	R_session: Stores backup R session files to help recover the environment if the kernel crashes.
+	•	workshop_requirements.txt: A file listing all required packages for setting up the Conda environment.
 
 ## Setup Conda environment
 
@@ -58,7 +85,6 @@ Then add the required channels as stated before (in the correct order!)
 ```sh
 conda create --name sc_FAANG --file workshop_requirements.txt
 ```
-
 
 
 
