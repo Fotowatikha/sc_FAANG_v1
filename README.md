@@ -10,9 +10,7 @@ Welcome to the Single-Cell RNA Sequencing (scRNA-seq) Workshop repository. This 
 - [Setting Up the Conda Environment](#setting-up-the-conda-environment)
 - [Setting Up the R Kernel](#setting-up-the-r-kernel)
 - [Setting Up Jupyter Notebook](#setting-up-jupyter-notebook)
-- [How to Use This Repository](#how-to-use-this-repository)
-- [Exercises](#exercises)
-- [Output Management](#output-management)
+- [Current Problems with Running the Notebook](#Current-Problems-with-Running-the-Notebook)
 
 ## Introduction
 
@@ -100,7 +98,7 @@ conda create --name sc_FAANG --file workshop_requirements.txt
 ```
 
 ## Setting Up the R Kernel
-Before starting the Jupyter Notebook, you need to set up the R kernel. Follow these steps:
+Before starting the Jupyter Notebook, you need to set up the R kernel. Follow the steps below steps. Note that you only need to do this once. Once the kernels are registered, this step is no longer required in future sessions.
 
 **1.** With your Conda environment set, you should run:
 ```sh
@@ -160,6 +158,7 @@ Once you have successfully logged into the notebook environment, navigate to the
 
 <img width="1203" alt="Scherm­afbeelding 2024-11-09 om 08 38 02" src="https://github.com/user-attachments/assets/fafd9777-9822-4320-83b9-f9d1e5667cfc">
 
+
 **5.** Keep the Jupyter Notebook running:
 
 To ensure that your Jupyter Notebook session remains active even if you disconnect from the HPC, you can use `screen` or `nohup`
@@ -191,3 +190,13 @@ Once you have identified the PID of the process, you can kill it using the `kill
 kill <PID>
 ```
 or force-kill it with `-9`
+
+## Current Problems with Running the Notebook
+
+The current iteration of the R code in the Jupyter Notebook runs quite slowly, especially during the single-cell data integration of the ileum tissue, which occurs in the first two code chunks. While performance improves as the workshop progresses (by clearing memory and deleting large matrices), it is important to note that we have built in a safeguard to ensure that, in case of a kernel crash, users can continue from where they left off. Please read to the notebook for more detailed information about this safeguard.
+
+This safeguard works by saving the complete R session to a temporary folder, which is automatically removed at the end of the workshop. However, this process adds additional time to the computation, as large files are read and written during each code execution. In the final version, this safeguard will only be included in sections with a high risk of kernel failure to optimize performance.
+
+Although the notebook currently runs slowly, kernel failures have not been observed when running on the `/Lustre/BIF` node. However, they have been regularly experienced when running on the Annuna home directory, likely due to unreliable storage resources. This issue may not affect users working within their personal Lustre paths. The safeguard is in place specifically to solve these potential issues
+
+Further optimization of specific sections is planned for future revisions and will be discussed in subsequent updates.
