@@ -24,7 +24,7 @@ Participants will learn how to integrate scRNA-seq data from multiple replicates
 ## Requirements and Installation
 The specific libraries for this workshop are explained within the Jupyter Notebook. The necessary packages are listed in the `workshop_requirements.txt` file, which should be used to set up a **Conda environment** on the cluster. Once the environment is set up, all software, packages, kernels, and Jupyter Notebook dependencies will be installed.
 
-To begin, copy the **for_Ole** folder from `/lustre/shared/for_Ole`, which contains all the files that you need. All relevant workshop files are located in the following directory on the cluster as follows:
+To begin, copy the **for_Ole** folder from `/lustre/shared/for_Ole` to your own directory, which contains all the files that you need. All relevant workshop files are located in the following directory on the cluster as follows:
 ```text
 /lustre/shared/for_Ole
 ├── rscript
