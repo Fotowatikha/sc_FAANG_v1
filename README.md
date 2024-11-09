@@ -109,38 +109,75 @@ conda activate sc_FAANG
 
 **2.** Start an R session by typing `R` in the command line:
 ```sh
-    R
+R
 ```
 
 **3.** Install the R kernel by running:
 ```r
-  IRkernel::installspec(user = TRUE)
+IRkernel::installspec(user = TRUE) 
 ```
 You only need to do this one, as this will register the available R kernels, including the community-made **xeus-R kernel** that supports interactive R sessions.
 Note that in this first revision, we will not yet leverage the xeus-R kernel, as this requires PuTTY (Windows) or X11 (Mac) on the user's end. (**Please decide if you want this to be part of the workshop, as it allows for an interactive session where users can select their starting nodes during the pseudotime analysis. If this is too complicated, we can instead display several nodes on the UMAP and allow students to select their nodes of choice by interacting with the code.**)
 
 **4.** Close the R session by typing:
 ```r
-    q()
+q()
 ```
 
 The R kernel will now be available for use in Jupyter Notebook, allowing for interactive sessions in **Monocle3** when combined with the following configuration:
 ```r
-    options(browser="firefox")
+options(browser="firefox")
 ```
-This configuration is essential for running interactive modes with **Putty (Windows)** or **X11 forwarding (MacOS)** to enable browser-based outputs.
+This configuration is required for running interactive modes with **Putty (Windows)** or **X11 forwarding (MacOS)** that enables browser-based outputs. Firefox is included in the Conda environment.
 
 
+## Setting Up Jupyter Notebook
 
+To run the workshop, you need to set up Jupyter Notebook on your HPC (High-Performance Computing) cluster and connect to it from your local machine. Follow these steps for a smooth setup:
 
+**1.** Start Jupyter Notebook on the HPC:
+```sh
+jupyter notebook --no-browser --ip=0.0.0.0 --port=8890
+```
+The `--no-browser` esnures that Jupyter does not to open any browser on the HPC, and `--ip=0.0.0.0` option allows remote access. The `--port=8890` specifies the port Jupyter will run on. Make sure to choose a port that is not already in use.
 
+**2.** Connect to Jupyter Notebook from your local machine using SSH tunneling:
+```sh
+ssh -NfL localhost:8890:localhost:8890 username@login.anunna.wur.nl
+```
+The `-NfL` flags create a secure tunnel from your local machine to the HPC without opening an interactive shell. This forwards the port `8890` on your local machine to the same port on the HPC.
 
+**3.** Access Jupyter Notebook in your web browser:
+Copy the URL provided by the Jupyter Notebook command (e.g., `http://127.0.0.1:8888/?token=...`) and paste it into your local web browser (see figure below). This will open Jupyter Notebook and allow you to interact with it as if it were running on your local computer.
 
+Please make sure that the port `8890` is not already in use locally. If it is, change the port number in both the Jupyter command and the SSH command (e.g `--port=8889` and `localhost:8889:localhost:8889`).
 
+**4.** Keep the Jupyter Notebook running:
+To ensure that your Jupyter Notebook session remains active even if you disconnect from the HPC, you can use `screen` or `nohup`:
 
+**5.** Session duration and port usage:
+Your Jupyter Notebook session will remain active for up to **8 hours**. Make sure that the specified port remains reserved for that duration. If you need to start a new session, use a different port number (e.g. `--port=8890`).
 
+**6.** Some tips for troubleshooting
+If you encounter problems connecting or if the port seems blocked, check for active sessions and kill it, or use a different port as mentioned before.
 
+To kill a session, you need to find the Process ID (PID) on your local machine.
+To find running SSH processes, use:
+```bash
+ps aux | grep ssh
+```
+Then, find the process using a specific port (e.g. our 8890)
 
+To find the PID of of the process is using that specific port (e.g., 889), use:
+```bash
+lsof -i :8890
+```
+The output will look like **ssh     2545 hamid    7u  IPv6 0x38854........      0t0  TCP localhost:ddi-tcp-1 (LISTEN)**
+This show information about the processes using the port, including their PIDs (in the first or second column; 2545).
 
-
+Once you have identified the PID of the process, you can kill it using the `kill` command:
+```bash
+kill <PID>
+```
+or force-kill it with `-9`
 
