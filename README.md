@@ -193,7 +193,7 @@ or force-kill it with `-9`
 
 ## Current Problems with Running the Notebook
 
-The current iteration of the R code in the Jupyter Notebook runs quite slowly, especially during the single-cell data integration of the ileum tissue, which occurs in the first two code chunks. While performance improves as the workshop progresses (by clearing memory and deleting large matrices), it is important to note that we have built in a safeguard to ensure that, in case of a kernel crash, users can continue from where they left off. Please read to the notebook for more detailed information about this safeguard.
+The current iteration of the R code in the Jupyter Notebook runs quite slowly, especially during the single-cell data integration of the ileum tissue, which occurs in the first two code chunks. While performance improves as the workshop progresses (by clearing memory and deleting large matrices), it is important to note that we have built in a safeguard to ensure that, in case of a kernel crash, users can continue from where they left off. Please read to the notebook for more detailed information about this.
 
 This safeguard works by saving the complete R session to a temporary folder, which is automatically removed at the end of the workshop. However, this process adds additional time to the computation, as large files are read and written during each code execution. In the final version, this safeguard will only be included in sections with a high risk of kernel failure to optimize performance.
 
