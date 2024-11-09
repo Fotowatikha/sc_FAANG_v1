@@ -15,7 +15,7 @@ The specific libraries for this workshop are explained within the Jupyter Notebo
 ## Installation
 To begin, clone this repository by running the following commands:
 ```sh
-git clone https://github.com/yourusername/scRNAseq-workshop.git
+git clone 
 ```
 
 ## Setup Conda environment
