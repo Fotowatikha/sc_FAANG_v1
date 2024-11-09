@@ -134,7 +134,7 @@ To run the workshop, you need to set up Jupyter Notebook on the HPC cluster and 
 ```sh
 jupyter notebook --no-browser --ip=0.0.0.0 --port=8890
 ```
-The `--no-browser` esnures that Jupyter does not to open any browser on the HPC, and `--ip=0.0.0.0` option allows remote access. The `--port=8890` specifies the port Jupyter will run on. Make sure to choose a port that is not already in use.
+The `--no-browser` will make sure that Jupyter does not to open any browser on the HPC, and `--ip=0.0.0.0` option allows the remote access. The `--port=8890` specifies the port Jupyter will run on. Make sure to choose a port that is not already in use.
 
 **2.** Then Connect to Jupyter Notebook from your local machine using SSH tunneling:
 ```sh
