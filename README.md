@@ -140,7 +140,7 @@ The `--no-browser` will make sure that Jupyter does not to open any browser on t
 ```sh
 ssh -NfL localhost:8890:localhost:8890 username@login.anunna.wur.nl
 ```
-The `-NfL` flags create a secure tunnel from your local machine to the HPC without opening an interactive shell. This forwards the port `8890` on your local machine to the same port on the HPC.
+The `-NfL` creates a secure tunnel from your local machine to the HPC without opening any interactive shell. This forwards the port `8890` on your local machine to the same port on the HPC.
 
 **3.** Access Jupyter Notebook in your web browser:
 
