@@ -1,6 +1,6 @@
 # Single-Cell RNA Sequencing Workshop: Analysis of Ileum Tissue and Organoids
 
-Welcome to the Single-Cell RNA Sequencing (scRNA-seq) Workshop repository. This workshop is designed to provide students with a brief handson experience in analyzing and interpreting single-cell data using tools such as **Seurat** and **Monocle3** in R. It represents a snippet of the workflow that I learned, applied and validated during my thesis. The workshop focuses on data integration, clustering, differential gene expression analysis, and trajectory analysis to compare ileum tissue and organoid samples. It also includes some theory behind the methodology, as I believe it is important to understand what you are doing and why using a particular tool makes sense. After all, there is no artistry in simply pressing a button and getting results.
+Welcome to the Single-Cell RNA Sequencing (scRNA-seq) Workshop repository. This workshop is designed to provide students with a brief handson experience in analyzing and interpreting single-cell data using tools such as **Seurat** and **Monocle3** in R. It represents a snippet of the workflow that I learned, applied and validated during my thesis. The workshop focuses on data integration, clustering, differential gene expression analysis, and trajectory analysis to compare ileum tissue and organoid samples. It also includes some theory behind the methodology, as I believe it is important to understand what you are doing and why using a particular tool makes sense. After all, there is no artistry in simply pressing a button and getting results (in my opinion...).
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -48,13 +48,13 @@ Or copy the **for_Ole** folder from `/lustre/shared/for_Ole`, which contains all
 ├── workshop_requirements.txt
 ```
 	
-	•	rscript/data_workshop: Contains raw data files, including ileum_tissue, organoid.seurat, and organoid.cds objects for analysis.
-	•	FAANG_RMD.Rmd: Backup R Notebook for local use.
-	•	FAANG.ipynb: The main Jupyter Notebook for the workshop.
-	•	Figures: Contains markdown figures used in notebook explanations.
-	•	generated_Figures: A temporary folder for rendering figures during the workshop.
-	•	R_session: Stores backup R session files to help recover the environment if the kernel crashes.
-	•	workshop_requirements.txt: A file listing all required packages for setting up the Conda environment.
+- **rscript/data_workshop:** Contains raw data files, including ileum_tissue, organoid.seurat, and organoid.cds objects for analysis.
+- **FAANG_RMD.Rmd:** Backup R Notebook for local use.
+- **FAANG.ipynb:** The main Jupyter Notebook for the workshop.
+- **Figures:** Contains markdown figures used in notebook explanations.
+- **generated_Figures:** A temporary folder for rendering figures during the workshop.
+- **R_session:** Stores backup R session files to help recover the environment if the kernel crashes.
+- **workshop_requirements.txt:** A file listing all required packages for setting up the Conda environment.
 
 **Please do not change anything within this folder.**
 
@@ -98,7 +98,3 @@ Then add the required channels as stated before (in the correct order!)
 ```sh
 conda create --name sc_FAANG --file workshop_requirements.txt
 ```
-```sh
-conda create --name sc_FAANG --file workshop_requirements.txt
-```
-
