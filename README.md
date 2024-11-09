@@ -154,15 +154,21 @@ Copy the URL provided by the Jupyter Notebook command (e.g., `http://127.0.0.1:8
 
 Please make sure that the port `8890` is not already in use locally. If it is, change the port number in both the Jupyter command and the SSH command (e.g `--port=8889` and `localhost:8889:localhost:8889`).
 
-**4.** Keep the Jupyter Notebook running:
+**4.** Open the notebook:
+
+Once you have successfully logged into the notebook environment, navigate to the notebook path and double-click to open it, as demonstrated in the figure below.
+
+<img width="1203" alt="Scherm­afbeelding 2024-11-09 om 08 38 02" src="https://github.com/user-attachments/assets/fafd9777-9822-4320-83b9-f9d1e5667cfc">
+
+**5.** Keep the Jupyter Notebook running:
 
 To ensure that your Jupyter Notebook session remains active even if you disconnect from the HPC, you can use `screen` or `nohup`
 
-**5.** Session duration and port usage:
+**6.** Session duration and port usage:
 
 Your Jupyter Notebook session will remain active for up to **8 hours**. Make sure that the specified port remains reserved for that duration. If you need to start a new session, use a different port number (e.g. `--port=8890`).
 
-**6.** Some tips for troubleshooting:
+**7.** Some tips for troubleshooting:
 
 If you encounter problems connecting or if the port seems blocked, check for active sessions and kill it, or use a different port as mentioned before.
 
@@ -177,7 +183,7 @@ To find the PID of of the process is using that specific port (e.g., 889), use:
 ```bash
 lsof -i :8890
 ```
-The output will look like `**ssh     2545 hamid    7u  IPv6 0x38854........      0t0  TCP localhost:ddi-tcp-1 (LISTEN)**`
+The output will look like **`ssh     2545 hamid    7u  IPv6 0x38854........      0t0  TCP localhost:ddi-tcp-1 (LISTEN)`**
 This show information about the processes using the port, including their PIDs (in the first or second column; 2545).
 
 Once you have identified the PID of the process, you can kill it using the `kill` command:
@@ -185,4 +191,3 @@ Once you have identified the PID of the process, you can kill it using the `kill
 kill <PID>
 ```
 or force-kill it with `-9`
-
