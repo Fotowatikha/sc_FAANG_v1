@@ -45,6 +45,8 @@ Or copy the **for_Ole** folder from `/lustre/shared/for_Ole`, which contains all
 	•	R_session: Stores backup R session files to help recover the environment if the kernel crashes.
 	•	workshop_requirements.txt: A file listing all required packages for setting up the Conda environment.
 
+**Please do not change anything within this folder**
+
 ## Setup Conda environment
 
 This workshop is made to run on a Conda environment containing all the crucial packages for R, kernels and Jupyter. Here, i assume that you already have Anaconda or Miniconda installed. In case you don’t have it yet, then follow the steps below:
@@ -85,6 +87,7 @@ Then add the required channels as stated before (in the correct order!)
 ```sh
 conda create --name sc_FAANG --file workshop_requirements.txt
 ```
+
 
 
 
