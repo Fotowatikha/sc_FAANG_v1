@@ -10,7 +10,9 @@ Welcome to the Single-Cell RNA Sequencing (scRNA-seq) Workshop repository. This 
 - [Setting Up the Conda Environment](#setting-up-the-conda-environment)
 - [Setting Up the R Kernel](#setting-up-the-r-kernel)
 - [Setting Up Jupyter Notebook](#setting-up-jupyter-notebook)
+- [Closing a Notebook Session](#Closing-a-Notebook-Session)
 - [Current Problems with Running the Notebook](#Current-Problems-with-Running-the-Notebook)
+
 
 ## Introduction
 
@@ -114,7 +116,7 @@ R
 ```r
 IRkernel::installspec(user = TRUE) 
 ```
-You only need to do this one, as this will register the available R kernels, including the community-made **xeus-R kernel** that supports interactive R sessions (xeus-R kernel is already installed in your Conda enviroment, but we have to decide to use this or not.).
+You only need to do this one, as this will register the available R kernels, including the community-made **xeus-R kernel** that supports interactive R sessions.
 Note that in this first revision, we will not yet leverage the xeus-R kernel, as this requires PuTTY (Windows) or X11 (Mac) on the user's end. (**Please decide if you want this to be part of the workshop, as it allows for an interactive session where users can select their starting nodes during the pseudotime analysis. If this is too complicated, we can instead display several nodes on the UMAP and allow students to select their nodes of choice by interacting with the code.**)
 
 **4.** Close the R session by typing:
@@ -190,6 +192,25 @@ Once you have identified the PID of the process, you can kill it using the `kill
 kill <PID>
 ```
 or force-kill it with `-9`
+
+## Closing a Notebook Session
+
+When you are done with your work or want to stop using the Jupyter Notebook, you can log out and close the session as follows:
+
+**1.** Within the Jupyter Notebook interface, go to the top-left corner of your screen and click on **"File"**.
+**2.** Select **"Logout"** from the dropdown menu as shown in the figure below.
+
+<img width="344" alt="Scherm­afbeelding 2024-11-09 om 13 19 25" src="https://github.com/user-attachments/assets/4b9ec006-0451-42bb-9d02-cb054c256501">
+
+
+**3.** To entirely shut down the notebook after logging out:
+
+Go back to **"File"** and select **"Shutdown"** to close the session completely, as depicted in the figure below.
+
+<img width="1225" alt="Scherm­afbeelding 2024-11-09 om 13 22 02" src="https://github.com/user-attachments/assets/1ac3ea56-7a15-4dfd-ae3d-1ee88bf3a3c3">
+
+### Important Note
+The port used in your previous session will remain active on your local system for approximately **8 hours**. This means that if you log out from Annuna and want to start a new session within this time frame, you will not be able to use the same port. In this case, you must select a new port or wait for the previous session to expire. Alternatively, you can forcefully remove the active port before starting a new session.
 
 ## Current Problems with Running the Notebook
 
