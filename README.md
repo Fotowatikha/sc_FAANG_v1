@@ -130,18 +130,17 @@ options(browser="firefox")
 ```
 This configuration is required for running interactive modes with **Putty (Windows)** or **X11 forwarding (MacOS)** that enables browser-based outputs. Firefox is included in the Conda environment.
 
-
 ## Setting Up Jupyter Notebook
 
 To run the workshop, you need to set up Jupyter Notebook on your HPC (High-Performance Computing) cluster and connect to it from your local machine. Follow these steps for a smooth setup:
 
-**1.** Start Jupyter Notebook on the HPC:
+**1.** Start Jupyter Notebook on the HPC (You could also submit it as a SLURM to an external cluster with right resources):
 ```sh
 jupyter notebook --no-browser --ip=0.0.0.0 --port=8890
 ```
 The `--no-browser` esnures that Jupyter does not to open any browser on the HPC, and `--ip=0.0.0.0` option allows remote access. The `--port=8890` specifies the port Jupyter will run on. Make sure to choose a port that is not already in use.
 
-**2.** Connect to Jupyter Notebook from your local machine using SSH tunneling:
+**2.** Then Connect to Jupyter Notebook from your local machine using SSH tunneling:
 ```sh
 ssh -NfL localhost:8890:localhost:8890 username@login.anunna.wur.nl
 ```
@@ -172,7 +171,7 @@ To find the PID of of the process is using that specific port (e.g., 889), use:
 ```bash
 lsof -i :8890
 ```
-The output will look like **ssh     2545 hamid    7u  IPv6 0x38854........      0t0  TCP localhost:ddi-tcp-1 (LISTEN)**
+The output will look like `**ssh     2545 hamid    7u  IPv6 0x38854........      0t0  TCP localhost:ddi-tcp-1 (LISTEN)**`
 This show information about the processes using the port, including their PIDs (in the first or second column; 2545).
 
 Once you have identified the PID of the process, you can kill it using the `kill` command:
@@ -180,4 +179,9 @@ Once you have identified the PID of the process, you can kill it using the `kill
 kill <PID>
 ```
 or force-kill it with `-9`
+
+
+
+
+
 
