@@ -56,7 +56,7 @@ Or copy the **for_Ole** folder from `/lustre/shared/for_Ole`, which contains all
 - **R_session:** Stores backup R session files to help recover the environment if the kernel crashes.
 - **workshop_requirements.txt:** A file listing all required packages for setting up the Conda environment.
 
-**Please do not change anything within this folder.**
+**Please do not change anything within this folder!!!.**
 
 ## Setup Conda environment
 
@@ -98,3 +98,49 @@ Then add the required channels as stated before (in the correct order!)
 ```sh
 conda create --name sc_FAANG --file workshop_requirements.txt
 ```
+
+## Setting Up the R Kernel
+Before starting the Jupyter Notebook, you need to set up the R kernel. Follow these steps:
+
+**1.** With your Conda environment set, you should run:
+```sh
+conda activate sc_FAANG 
+```
+
+**2.** Start an R session by typing `R` in the command line:
+```sh
+    R
+```
+
+**3.** Install the R kernel by running:
+```r
+  IRkernel::installspec(user = TRUE)
+```
+You only need to do this one, as this will register the available R kernels, including the community-made **xeus-R kernel** that supports interactive R sessions.
+Note that in this first revision, we will not yet leverage the xeus-R kernel, as this requires PuTTY (Windows) or X11 (Mac) on the user's end. (**Please decide if you want this to be part of the workshop, as it allows for an interactive session where users can select their starting nodes during the pseudotime analysis. If this is too complicated, we can instead display several nodes on the UMAP and allow students to select their nodes of choice by interacting with the code.**)
+
+**4.** Close the R session by typing:
+```r
+    q()
+```
+
+The R kernel will now be available for use in Jupyter Notebook, allowing for interactive sessions in **Monocle3** when combined with the following configuration:
+```r
+    options(browser="firefox")
+```
+This configuration is essential for running interactive modes with **Putty (Windows)** or **X11 forwarding (MacOS)** to enable browser-based outputs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
