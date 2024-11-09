@@ -5,8 +5,7 @@ Welcome to the Single-Cell RNA Sequencing (scRNA-seq) Workshop repository. This 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Workshop Objectives](#workshop-objectives)
-- [Requirements](#requirements)
-- [Installation](#installation)
+- [Requirements and Installation](#Requirements and Installation)
 - [Folder Structure and Files](#folder-structure-and-files)
 - [Setting Up the Conda Environment](#setting-up-the-conda-environment)
 - [Setting Up the R Kernel](#setting-up-the-r-kernel)
@@ -22,10 +21,9 @@ This workshop will guide participants through the steps needed to analyze single
 ## Workshop Objectives
 Participants will learn how to integrate scRNA-seq data from multiple replicates to reduce batch effects. They will perform cell clustering and annotate cell types based on transcriptional profiles, understand and apply differential gene expression analysis to identify cell-specific markers, and use **Monocle3** to infer developmental trajectories and study gene expression patterns over pseudotime. Additionally, participants will compare the transcriptional landscape of ileum tissue and organoid samples to identify key similarities and differences. Emphasis will be placed on the absorptive lineage throughout this entire workshop.
 
-## Requirements
+## Requirements and Installation
 The specific libraries for this workshop are explained within the Jupyter Notebook. The necessary packages are listed in the `workshop_requirements.txt` file, which should be used to set up a **Conda environment** on the cluster. Once the environment is set up, all software, packages, kernels, and Jupyter Notebook dependencies will be installed.
 
-## Installation
 To begin, clone this repository by running the following commands:
 ```sh
 git clone 
@@ -97,6 +95,9 @@ conda config --remove channels <name of channel>
 Then add the required channels as stated before (in the correct order!)
 
 **3.** The requirements are provided in the **"workshop_requirements.txt"** that you downloaded form the Github page or the `/lustre/shared/for_Ole` folder. Make a new environment and install all the packages:
+```sh
+conda create --name sc_FAANG --file workshop_requirements.txt
+```
 ```sh
 conda create --name sc_FAANG --file workshop_requirements.txt
 ```
