@@ -112,7 +112,7 @@ R
 ```r
 IRkernel::installspec(user = TRUE) 
 ```
-You only need to do this one, as this will register the available R kernels, including the community-made **xeus-R kernel** that supports interactive R sessions.
+You only need to do this ones, as this will register the available R kernels, including the community-made **xeus-R kernel** that supports interactive R sessions.
 Note that in this first revision, we will not yet leverage the xeus-R kernel, as this requires PuTTY (Windows) or X11 (Mac) on the user's end. (**Please decide if you want this to be part of the workshop, as it allows for an interactive session where users can select their starting nodes during the pseudotime analysis. If this is too complicated, we can instead display several nodes on the UMAP and allow students to select their nodes of choice by interacting with the code.**)
 
 **4.** Close the R session by typing:
