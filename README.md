@@ -2,6 +2,19 @@
 
 Welcome to the Single-Cell RNA Sequencing (scRNA-seq) Workshop repository. This workshop is designed to provide students with a brief handson experience in analyzing and interpreting single-cell data using tools such as **Seurat** and **Monocle3** in R. It represents a snippet of the workflow that I learned, applied and validated during my thesis. The workshop focuses on data integration, clustering, differential gene expression analysis, and trajectory analysis to compare ileum tissue and organoid samples. It also includes some theory behind the methodology, as I believe it is important to understand what you are doing and why using a particular tool makes sense. After all, there is no artistry in simply pressing a button and getting results.
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Workshop Objectives](#workshop-objectives)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Folder Structure and Files](#folder-structure-and-files)
+- [Setting Up the Conda Environment](#setting-up-the-conda-environment)
+- [Setting Up the R Kernel](#setting-up-the-r-kernel)
+- [Setting Up Jupyter Notebook](#setting-up-jupyter-notebook)
+- [How to Use This Repository](#how-to-use-this-repository)
+- [Exercises](#exercises)
+- [Output Management](#output-management)
+
 ## Introduction
 
 This workshop will guide participants through the steps needed to analyze single-cell RNA sequencing data, starting from data integration and clustering to advanced analyses like trajectory inference. By the end of the workshop, participants will have an basic understanding of how to process and interpret scRNA-seq data, specifically focusing on ileum tissue and organoid samples.
@@ -45,7 +58,7 @@ Or copy the **for_Ole** folder from `/lustre/shared/for_Ole`, which contains all
 	•	R_session: Stores backup R session files to help recover the environment if the kernel crashes.
 	•	workshop_requirements.txt: A file listing all required packages for setting up the Conda environment.
 
-**Please do not change anything within this folder**
+**Please do not change anything within this folder.**
 
 ## Setup Conda environment
 
@@ -87,7 +100,4 @@ Then add the required channels as stated before (in the correct order!)
 ```sh
 conda create --name sc_FAANG --file workshop_requirements.txt
 ```
-
-
-
 
