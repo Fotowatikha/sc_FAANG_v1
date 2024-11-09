@@ -128,7 +128,7 @@ This configuration is required for running interactive modes with **Putty (Windo
 
 ## Setting Up Jupyter Notebook
 
-To run the workshop, you need to set up Jupyter Notebook on your HPC (High-Performance Computing) cluster and connect to it from your local machine. Follow these steps for a smooth setup:
+To run the workshop, you need to set up Jupyter Notebook on the HPC cluster and connect to it from your local machine. Follow these steps:
 
 **1.** Start Jupyter Notebook on the HPC (You could also submit it as a SLURM to an external cluster with right resources):
 ```sh
