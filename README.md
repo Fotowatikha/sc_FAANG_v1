@@ -147,6 +147,7 @@ ssh -NfL localhost:8890:localhost:8890 username@login.anunna.wur.nl
 The `-NfL` flags create a secure tunnel from your local machine to the HPC without opening an interactive shell. This forwards the port `8890` on your local machine to the same port on the HPC.
 
 **3.** Access Jupyter Notebook in your web browser:
+
 Copy the URL provided by the Jupyter Notebook command (e.g., `http://127.0.0.1:8888/?token=...`) and paste it into your local web browser (see figure below). This will open Jupyter Notebook and allow you to interact with it as if it were running on your local computer.
 
 <img width="1245" alt="jupytr" src="https://github.com/user-attachments/assets/d7e59d55-a85c-4a6c-b297-3193ebbe86e0">
@@ -154,12 +155,15 @@ Copy the URL provided by the Jupyter Notebook command (e.g., `http://127.0.0.1:8
 Please make sure that the port `8890` is not already in use locally. If it is, change the port number in both the Jupyter command and the SSH command (e.g `--port=8889` and `localhost:8889:localhost:8889`).
 
 **4.** Keep the Jupyter Notebook running:
-To ensure that your Jupyter Notebook session remains active even if you disconnect from the HPC, you can use `screen` or `nohup`:
+
+To ensure that your Jupyter Notebook session remains active even if you disconnect from the HPC, you can use `screen` or `nohup`
 
 **5.** Session duration and port usage:
+
 Your Jupyter Notebook session will remain active for up to **8 hours**. Make sure that the specified port remains reserved for that duration. If you need to start a new session, use a different port number (e.g. `--port=8890`).
 
-**6.** Some tips for troubleshooting
+**6.** Some tips for troubleshooting:
+
 If you encounter problems connecting or if the port seems blocked, check for active sessions and kill it, or use a different port as mentioned before.
 
 To kill a session, you need to find the Process ID (PID) on your local machine.
@@ -181,5 +185,4 @@ Once you have identified the PID of the process, you can kill it using the `kill
 kill <PID>
 ```
 or force-kill it with `-9`
-
 
