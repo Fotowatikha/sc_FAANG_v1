@@ -149,6 +149,8 @@ The `-NfL` flags create a secure tunnel from your local machine to the HPC witho
 **3.** Access Jupyter Notebook in your web browser:
 Copy the URL provided by the Jupyter Notebook command (e.g., `http://127.0.0.1:8888/?token=...`) and paste it into your local web browser (see figure below). This will open Jupyter Notebook and allow you to interact with it as if it were running on your local computer.
 
+<img width="1245" alt="jupytr" src="https://github.com/user-attachments/assets/d7e59d55-a85c-4a6c-b297-3193ebbe86e0">
+
 Please make sure that the port `8890` is not already in use locally. If it is, change the port number in both the Jupyter command and the SSH command (e.g `--port=8889` and `localhost:8889:localhost:8889`).
 
 **4.** Keep the Jupyter Notebook running:
@@ -179,9 +181,5 @@ Once you have identified the PID of the process, you can kill it using the `kill
 kill <PID>
 ```
 or force-kill it with `-9`
-
-
-
-
 
 
