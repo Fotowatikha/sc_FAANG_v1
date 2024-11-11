@@ -165,7 +165,7 @@ To ensure that your Jupyter Notebook session remains active even if you disconne
 
 Your Jupyter Notebook session will remain active for up to **8 hours**. Make sure that the specified port remains reserved for that duration. If you need to start a new session, use a different port number (e.g. `--port=8890`).
 
-**7.** Some tips for troubleshooting:
+### Some tips for troubleshooting:
 
 If you encounter problems connecting or if the port seems blocked, check for active sessions and kill it, or use a different port as mentioned before.
 
