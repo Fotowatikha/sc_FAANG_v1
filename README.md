@@ -165,11 +165,11 @@ To ensure that your Jupyter Notebook session remains active even if you disconne
 Your Jupyter Notebook session will remain active for up to **8 hours**. Make sure that the specified port remains reserved for that duration. If you need to start a new session, use a different port number (e.g. `--port=8890`).
 
 Once you open the Jupyter Notebook, please read the instructions carefully, especially at the beginning. Here it explains how to load the R libraries and reload them in case of kernel crashes to continue from where you left off.
-For now, please continue working within the **“for_Ole”** folder to ensure that everything is opened and saved correctly. If you need to change the location of the notebook, make sure to follow the same structure as in the **“for_Ole”** folder and name the additional folders as shown previously. You can modify the paths to the required data as depicted in the figure below. These lines are located in the code block after loading the R libraries.
+For now, please continue working within the **for_Ole** folder to ensure that everything is opened and saved correctly. If you need to change the location of the notebook, make sure to follow the same structure as in the **for_Ole** folder and name the additional folders as shown previously. You can modify the paths to the required data as depicted in the figure below. These lines are located in the code block after loading the R libraries.
 
 ![Scherm­afbeelding 2024-11-11 om 09 46 43](https://github.com/user-attachments/assets/3f7cdcfc-42d2-43a3-a984-35292ea5a39b)
 
-**Note**: You do not need to change anything if you simply copy the **“for_Ole”** folder to a new location and continue working within it.
+**Note**: You do not need to change anything if you simply copy the **for_Ole** folder to a new location and continue working within it.
 
 ### Some tips for troubleshooting:
 
