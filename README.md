@@ -1,4 +1,4 @@
-# Single-Cell RNA Sequencing Workshop: Analysis of Ileum Tissue and Organoids
+# Single-Cell RNA Sequencing Workshop: Analysis of the Porcine Ileum Tissue and Organoid
 
 Welcome to the Single-Cell RNA Sequencing (scRNA-seq) Workshop repository. This workshop is designed to provide students with a brief handson experience in analyzing and interpreting single-cell data using tools such as **Seurat** and **Monocle3** in R. It represents a snippet of the workflow that I learned, applied and validated during my thesis. The workshop focuses on data integration, clustering, differential gene expression analysis, and trajectory analysis to compare ileum tissue and organoid samples. It also includes some theory behind the methodology, as I believe it is important to understand what you are doing and why using a particular tool makes sense. After all, there is no artistry in simply pressing a button and getting results (in my opinion...).
 
