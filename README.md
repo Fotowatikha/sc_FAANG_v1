@@ -96,7 +96,7 @@ conda create --name sc_FAANG --file workshop_requirements.txt
 ```
 
 ## Setting Up the R Kernel
-Before starting the Jupyter Notebook, you need to set up the R kernel. Follow the steps below steps. Note that you only need to do this once. Once the kernels are registered, this step is no longer required in future sessions.
+Before starting the Jupyter Notebook, you need to set up the R kernel. Follow the steps below steps. Note that you only need to do this once. Once the kernels are registered, this step is no longer required in future sessions. (unless you reinstall the conda envrioment)
 
 **1.** With your Conda environment set, you should run:
 ```sh
