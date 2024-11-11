@@ -217,3 +217,12 @@ This safeguard works by saving the complete R session to a temporary folder, whi
 Although the notebook currently runs slowly, kernel failures have not been observed when running on the `/Lustre/BIF` node. However, they have been regularly experienced when running on the Annuna home directory, likely due to unreliable storage resources. This issue may not affect users working within their personal Lustre paths. The safeguard is in place specifically to solve these potential issues
 
 Further optimization of specific sections is planned for future revisions and will be discussed in subsequent updates.
+
+### How to Speed It Up if You Do Not Experience Kernel Crashes?
+
+If you do not experience kernel crashes, you can partially speed up the execution of code blocks by skipping the "saving the R session" step. This is particularly helpful in the initial chunks where we load the ileal tissue data and perform data integration, as well as later when we integrate the epithelial subset of the tissue with the organoid.
+
+To speed up the code, you can delete the following lines in each chunk, as shown in the figure below. These lines are typically found at the beginning and end of the code blocks:
+
+![Scherm­afbeelding 2024-11-11 om 09 18 44](https://github.com/user-attachments/assets/842b0a8d-096d-4e28-8a36-cc55f22d4f05)
+
