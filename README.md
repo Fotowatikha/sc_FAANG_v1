@@ -169,7 +169,7 @@ For now, please continue working within the **for_Ole** folder to ensure that ev
 
 ![Scherm­afbeelding 2024-11-11 om 09 46 43](https://github.com/user-attachments/assets/3f7cdcfc-42d2-43a3-a984-35292ea5a39b)
 
-**Note**: You do not need to change anything if you simply copy the **for_Ole** folder to a new location and continue working within it.
+**Note**: You do not need to change anything if you simply copy the **for_Ole** folder to a new location and continue working within it (see section **Requirements and Installation** for the folder layout).
 
 ### Some tips for troubleshooting:
 
